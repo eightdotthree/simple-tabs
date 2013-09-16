@@ -1,4 +1,4 @@
-;(function($)
+(function($)
 {
     var pluginName = 'simpleTabs';
 
@@ -16,6 +16,7 @@
         base.init = function()
         {
             base.options = $.extend({}, $.fn[pluginName].defaultOptions, options);
+            base.active = $('a.active', base.el);
 
             $('a', base.el).each(function(key, value)
             {
